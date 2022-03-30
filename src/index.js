@@ -5,6 +5,7 @@ import { Statistics } from './components/Statistics'
 import { math } from './utils/index'
 import { config } from './config'
 import './css/index.css';
+import { Table } from './components/table/Table'
 
 const handleClick = event => {
     event.target.classList.add('active');
@@ -72,6 +73,8 @@ export const WebSocket = () => {
 
     return (
         <div className={'-app'}>
+            <Table></Table>
+            <hr/>
             <h4 className={'-app__title'}>ReadyState: {readyStateString}</h4>
             <div className={'-app__control'}>
                 <button
